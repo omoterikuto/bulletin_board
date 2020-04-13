@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  background-color: rgba(0, 0, 0, .05);
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color:#555;
+}
+div {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin-bottom: 5px;
+}
+
+.message-bar {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+.msg {
+  font-weight: bold;
+  padding: 10px 0;
+}
+.msg.success {
+  color: #4caf50;
+}
+.msg.error {
+  color: #f44336;
+}
+
+.title {
+  text-align: center;
+}
+.title h1{
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.title p {
+  margin-bottom: 20px;
+}
+
+.input-form ,.posts, .admin-posts {
+  width:380px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 8px #ccc;
+}
+.input-form {
+  padding: 30px;
+}
+.contents-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+#username {
+  border: 1px solid rgba(8, 180, 255, 1.0);
+  border-radius: 3px;
+  height: 25px;
+  vertical-align: super;
+  width: 90px;
+  padding: 5px;
+  font-size: 1.3rem;
+}
+.username {
+  display: inline-block;
+  width: 30%;
+}
+.comment {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.3rem;
+}
+textarea {
+  vertical-align: bottom;
+  width: 100%;
+  border: 1px solid rgba(8, 180, 255, 1.0);
+  border-radius: 3px;
+  padding: 3px;
+  height: 41px;
+}
+input[type=file] {
+  display: none;
+}
+label[for=my_file] {
+  cursor: pointer;
+  display: inline-block;
+  color: rgba(8, 180, 255, 1.0);
+  border: 1px solid rgba(8, 180, 255, 1.0);
+  padding: 12px 12px;
+  border-radius: 3px;
+  transition: .2s;
+  height: 100%;
+
+}
+label[for=my_file]:hover {
+  background-color: rgba(8, 180, 255, 1.0);
+  color:#fff;
+}
+label {
+  font-size: 1.4rem;
+}
+.required {
+  color:#f00;
+  font-size: 1.2rem;
+  margin-left: 4px;
+}
+.btn-wrapper {
+  text-align: center;
+  padding-top: 20px;
+}
+.submit-btn, .cancel-btn {
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: inline-block;
+  color: rgba(8, 180, 255, 1.0);
+  border: 1px solid rgba(8, 180, 255, 1.0);
+  padding: 8px 18px;
+  border-radius: 3px;
+  transition: .2s;
+  text-decoration: none;
+}
+.submit-btn:hover, .cancel-btn:hover {
+  background-color: rgba(8, 180, 255, 1.0);
+  color:#fff;
+}
+
+.posts ,.admin-posts {
+  padding: 10px 0;
+}
+.sort-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.sort-btn div{
+  color:rgba(8, 94, 255, 0.993);
+  margin: 0 10px 5px 0px;
+  cursor: pointer;
+  line-height: 1.4;
+
+}
+.image img {
+  width: 180px;
+  object-fit: cover;
+  height: 150px;
+  vertical-align: bottom;
+}
+.post {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 0;
+}
+.post:nth-of-type(2n) {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.post:nth-of-type(2) {
+  border-top: 2px solid #ddd;
+}
+.user-meta {
+  display: inline-flex;
+  justify-content: start;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(8, 180, 255, 1.0);
+  padding: 0 2px 1px;
+}
+.user-name {
+  font-size: 1.5rem;
+}
+.post-date {
+  font-size: 1rem;
+  padding-left: 10px;
+  color: #888;
+}
+.user-text {
+  padding: 8px 10px 0 10px;
+}
+.user-comment {
+  font-size: 1.1rem;
+}
+/* 管理ページ */
+label[for=admin_password] {
+  font-size: 1.4rem;
+  margin-left: 3px;
+}
+.admin-login form{
+  display: flex;
+  justify-content: center;
+}
+.admin-login form>div{
+  display: flex;
+  flex-direction: column;
+}
+.admin-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width:380px;
+  margin: 0px auto;
+}
+.login-btn {
+  margin-left: 10px;
+  background-color: rgba(8, 180, 255, 1.0);
+  color :#fff;
+  cursor: pointer;
+  border: none;
+  transition: .2s;
+  padding: 0 20px;
+  border-radius: 3px;
+  font-size: 1.4rem;
+}
+.login-btn:hover {
+  background-color: rgba(8, 180, 255, .8);
+}
+.logout-btn:hover ,.download-btn:hover {
+  background-color: rgba(8, 180, 255, 1.0);
+  color: #fff;
+}
+.logout-btn ,.download-btn {
+  color: rgba(8, 180, 255, 1.0);
+  border: 1px solid rgba(8, 180, 255, 1.0) ;
+  cursor: pointer;
+  transition: .2s;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+.admin-posts .post:nth-of-type(2n) {
+  flex-direction: row;
+  justify-content: start;
+}
+.edit-btn a{
+  padding: 1px;
+  margin-top: 3px;
+}
+.edit-btn {
+  margin-top: 3px;
+}
+@media screen and (min-width:481px) {
+  .input-form ,.posts, .admin-posts, .admin-btn-wrapper {
+    width:450px;
+  }
+  .post-date {
+  padding: 4px 0 0 10px;
+  }
+  .user-comment {
+    font-size: 1.2rem;
+  }
+  .image img {
+    width: 200px;
+  }
+}
+@media screen and (min-width:834px) {
+  .user-name {
+    font-size: 1.8rem;
+  }
+  .input-form ,.posts, .admin-posts, .admin-btn-wrapper{
+    width:800px;
+  }
+  .user-comment {
+    font-size: 1.5rem;
+  }
+  #username {
+    vertical-align: super;
+    box-sizing: border-box;
+    width: 160px;
+  }
+  label {
+    font-size: 2rem;
+  }
+  .required {
+    font-size: 1.2rem;
+    margin: 0 10px 0 5px;
+  }
+  .input-form {
+    padding: 40px 60px;
+  }
+  .image img {
+    width: 280px;
+    height: 200px;
+
+  }
+}
+@media screen and (min-width:1025px) {
+  .input-form ,.posts, .admin-posts, .admin-btn-wrapper{
+    width:1000px;
+  }
+}
